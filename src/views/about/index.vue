@@ -1,0 +1,17 @@
+<template>
+  <div>
+    我是关于页面
+  </div>
+</template>
+
+<script>
+export default {
+  name: '',
+  setup() {
+
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+</style>
