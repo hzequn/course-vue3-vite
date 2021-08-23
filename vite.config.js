@@ -31,7 +31,7 @@ export default defineConfig({
         proxy: {
             "/ydypf": {
                 //要访问的跨域的域名
-                target: "http://10.0.0.177:8085",
+                target: "http://10.0.0.185:8085",
                 /** 是否启用websockets */
                 ws: false,
                 /** 使用的是http协议则设置为false，https协议则设置为true */
