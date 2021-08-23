@@ -25,7 +25,7 @@ export default defineConfig({
     },
     server: {
         port: 3000,
-        host: "10.0.0.222",
+        // host: "10.0.0.222",
         // https: true,
         open:true,
         proxy: {
