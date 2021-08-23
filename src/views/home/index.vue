@@ -10,7 +10,7 @@
 </template>
 
 <script setup>
-import { computed, getCurrentInstance, reactive, ref } from "vue"
+import { computed, getCurrentInstance, reactive, ref, onMounted } from "vue"
 import { useStore } from 'vuex'
 const value2 = ref('')
 console.log(getCurrentInstance())
@@ -29,6 +29,24 @@ const count2 = computed(() => store.getters.getCount)
 function handleAddCount() {
   store.dispatch('addAction', 1)
 }
+
+const { appContext: { config: { globalProperties: { $api } } } } = getCurrentInstance()
+function getlist() {
+  $api.truckLocationByPage({
+    driverName: '',
+    driverMobile: '',
+    plateNumber: '',
+    currentPage: 1,
+    pageSize: 10,
+  }).then(res => {
+    console.log(res)
+  })
+}
+
+onMounted(() => {
+  getlist()
+})
+
 </script>
 
 <style lang="scss" scoped>
