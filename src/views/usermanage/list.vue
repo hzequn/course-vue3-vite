@@ -1,15 +1,8 @@
 <template>
-  <div class="content"></div>
+  <div class="content">用户管理</div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-
-    }
-  }
-}
+<script setup>
 </script>
 
 <style lang="scss" scoped>

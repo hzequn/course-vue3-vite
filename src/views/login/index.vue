@@ -18,7 +18,7 @@
 
 <script setup>
 import { useRouter } from 'vue-router'
-import { getCurrentInstance, toRefs, reactive } from 'vue'
+import { getCurrentInstance, reactive } from 'vue'
 const { appContext: { config: { globalProperties: { $api } } } } = getCurrentInstance()
 const router = useRouter()
 const data = reactive({
@@ -36,6 +36,9 @@ const rules = {
   ]
 }
 const handLogin = () => {
+  $api.user_login({}).then(res => {
+
+  })
   console.log(data.form)
 }
 </script>
